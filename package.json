@@ -1,0 +1,24 @@
+{
+  "name": "review-system",
+  "version": "1.0.0",
+  "description": "A section of the review-system, build for the final thesis",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Havgaard-Coding/Hovedopgave-Review-system.git"
+  },
+  "author": "Tobias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Havgaard-Coding/Hovedopgave-Review-system/issues"
+  },
+  "homepage": "https://github.com/Havgaard-Coding/Hovedopgave-Review-system#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.62.1"
+  }
+}
