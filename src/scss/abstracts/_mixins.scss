@@ -1,0 +1,5 @@
+@use "./variables" as c;
+
+@mixin main-gradient {
+  background: linear-gradient(to bottom, c.$gradient_light, c.$gradient_dark);
+}
