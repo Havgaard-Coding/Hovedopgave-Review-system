@@ -39,18 +39,44 @@
       </article>
     </header>
     <main>
-      <!-- Component making section -->
+      <!-- Component making section : Remember to add name="" -->
       <form action="#">
-        <section class="input">
-          <label class="input__title" for="title-input"
-            >Title<span class="input__title--asterisk">*</span></label
+        <section class="input input--flex">
+          <label class="input__label" for="title-input"
+            >Title<span class="input__label input__label--asterisk"
+              >&nbsp;*</span
+            ></label
           >
           <input
             class="input__field"
             id="title-input"
-            type="date"
+            type="text"
             placeholder="Enter title..."
           />
+        </section>
+
+        <section class="input input--flex">
+          <label class="input__label input__label--on-blue" for="title-input"
+            >Title<span class="input__label--asterisk">&nbsp;*</span></label
+          >
+          <input
+            class="input__field input__field--on-blue"
+            id="title-input"
+            type="text"
+            placeholder="Enter title..."
+          />
+        </section>
+
+        <section class="input">
+          <label class="input__label input__label--on-blue" for="participants"
+            >Review participants<span class="input__label--asterisk"></span
+          ></label>
+          <select class="input__field select" name="" id="participants">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
         </section>
       </form>
     </main>

@@ -12,15 +12,23 @@ html {
 }
 
 /*
+    Remove default padding and margin
+*/
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-  ) {
-  all: unset;
-  display: revert;
-}
+// *:where(
+//     :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+//   ) {
+//   all: unset;
+//   display: revert;
+// }
 
 /* Preferred box-sizing value */
 *,
@@ -59,10 +67,10 @@ textarea {
   -webkit-user-select: auto;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
-}
+// /* revert the 'white-space' property for textarea elements on Safari */
+// textarea {
+//   white-space: revert;
+// }
 
 /* minimum style to allow to style meter element */
 meter {

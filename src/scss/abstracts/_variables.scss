@@ -2,8 +2,15 @@
 $primary: #48749b;
 $primary_shade: #172b46;
 $primary_tint: #9eb9d1;
+
+$light_grey: #ededed;
+$dark_grey: #b3b3b3;
 $white: #ffffff;
 $black: #000000;
 
+//borders
+$input_border: $dark_grey;
+
+// Gradients
 $gradient_light: $primary;
 $gradient_dark: #355673;

@@ -11,14 +11,17 @@ html {
 }
 
 /*
+    Remove default padding and margin
+*/
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
-}
-
 /* Preferred box-sizing value */
 *,
 *::before,
@@ -54,11 +57,6 @@ table {
 input,
 textarea {
   -webkit-user-select: auto;
-}
-
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
 }
 
 /* minimum style to allow to style meter element */
@@ -113,25 +111,42 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.input {
+body {
+  background: teal;
+}
+
+/* input on white */
+.input--flex {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 5px;
 }
-.input__title {
+.input__label {
   font-size: 1.6rem;
+  color: #000000;
 }
-.input__title--asterisk {
+.input__label--asterisk {
   color: red;
 }
 .input__field {
   font-size: 1.4rem;
   height: 3rem;
   width: 100%;
+  background: #ffffff;
   padding: 0 1rem;
-  border: solid 1px grey;
+  border: solid 1px #b3b3b3;
   border-radius: 5px;
   align-items: center;
+}
+
+/* input on blue */
+.input__label--on-blue {
+  color: #ffffff;
+}
+.input__field--on-blue {
+  border: none;
+  background: #ffffff;
 }
 
 .header {
