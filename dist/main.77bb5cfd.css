@@ -4,6 +4,13 @@
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
 /*
+    Font-size adjusted to easier work with rem instead of px
+*/
+html {
+  font-size: 62.5%;
+}
+
+/*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
@@ -102,14 +109,76 @@ meter {
   all: revert;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input__title {
+  font-size: 1.6rem;
+}
+.input__title--asterisk {
+  color: red;
+}
+.input__field {
+  font-size: 1.4rem;
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  border: solid 1px grey;
+  border-radius: 5px;
+  align-items: center;
+}
+
 .header {
   width: 100%;
-  height: 60px;
+  height: 75px;
   background: linear-gradient(to bottom, #48749b, #355673);
+  /* 
+      Tranform on the menu used to offset the 5px padding given on the menu item
+  */
+}
+.header--space-between {
+  height: 100%;
+  margin: 0 3.2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__left-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 20rem;
+  height: auto;
+  margin-right: 2rem;
 }
 .header__title {
-  font-size: 30px;
-  font-weight: bolder;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding-left: 2rem;
+  border-left: solid 2px #ffffff;
+}
+.header__menu-list {
+  display: flex;
+  gap: 3rem;
+}
+.header__menu-item {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  border-bottom: solid 1px transparent;
+}
+.header__menu-item:hover {
+  border-bottom: solid 1px #ffffff;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

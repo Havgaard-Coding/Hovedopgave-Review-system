@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="/main.77bb5cfd.css">
     <title>Review system</title>
   <script src="/main.77bb5cfd.js"></script></head>
   <body>
     <header class="header">
-      <a href="#"><img class="header__logo" src="/AGRAMKOW_logo_white.20439bc7.svg" alt="AGRAMKOW company logo" title="AGRAMKOW company logo"></a>
-      <h1 class="header__title">Review System</h1>
-      <nav></nav>
+      <article class="header--space-between">
+        <section class="header__left-container">
+          <a><img class="header__logo" src="/AGRAMKOW_logo_white.b64b8627.svg" alt="AGRAMKOW company logo" title="AGRAMKOW company logo"></a>
+          <h1 class="header__title">Review System</h1>
+        </section>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <a class="header__menu-item--link" href="#"><li class="header__menu-item">My reviews</li></a>
+            <a class="header__menu-item--link" href="#"><li class="header__menu-item">Create review</li></a>
+            <a class="header__menu-item--link" href="#"><li class="header__menu-item">Search</li></a>
+            <a class="header__menu-item--link" href="#"><li class="header__menu-item">Teams</li></a>
+          </ul>
+        </nav>
+      </article>
     </header>
+    <main>
+      <!-- Component making section -->
+      <form action="#">
+        <section class="input">
+          <label class="input__title" for="title-input">Title<span class="input__title--asterisk">*</span></label>
+          <input class="input__field" id="title-input" type="date" placeholder="Enter title...">
+        </section>
+      </form>
+    </main>
   </body>
 </html>
