@@ -1,5 +1,12 @@
-@use "./variables" as c;
+@use "./variables" as *;
 
 @mixin main-gradient {
-  background: linear-gradient(to bottom, c.$gradient_light, c.$gradient_dark);
+  background: linear-gradient(to bottom, $gradient_light, $gradient_dark);
+}
+
+@mixin label-input--flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
 }

@@ -1,1 +1,45 @@
 @use "../abstracts/index" as *;
+
+// On white background
+.select {
+  @include label-input--flex;
+
+  &__label {
+    font-size: 1.6rem;
+    color: $black;
+  }
+
+  &__field {
+    font-size: 1.4rem;
+    height: 3rem;
+    width: 100%;
+    background: $white;
+    padding: 0 1rem;
+    border: solid 1px $input_border;
+    border-radius: 5px;
+    align-items: center;
+  }
+}
+
+// on color background
+.select {
+  &__label--on-color {
+    font-size: 1.6rem;
+    color: $white;
+  }
+
+  &__field {
+    font-size: 1.4rem;
+    height: 3rem;
+    width: 100%;
+    background: $white;
+    padding: 0 1rem;
+    border: solid 1px $input_border;
+    border-radius: 5px;
+    align-items: center;
+
+    &:focus {
+      outline: solid 2px $primary_shade;
+    }
+  }
+}

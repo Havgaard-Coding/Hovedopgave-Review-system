@@ -4,18 +4,22 @@
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
 /*
-    Font-size adjusted to easier work with rem instead of px
+    - Font-size adjusted to easier work with rem instead of px
+    - Remove margin and padding
+    - Hide overflow
 */
-html {
+html,
+body {
+  margin: 0;
+  height: 100%;
   font-size: 62.5%;
 }
 
-/*
-    Remove default padding and margin
-*/
-body {
-  padding: 0;
-  margin: 0;
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 75px);
+  position: relative;
 }
 
 /*
@@ -111,12 +115,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  background: teal;
+.--asterisk {
+  color: red !important;
 }
 
-/* input on white */
-.input--flex {
+.input {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -125,9 +128,6 @@ body {
 .input__label {
   font-size: 1.6rem;
   color: #000000;
-}
-.input__label--asterisk {
-  color: red;
 }
 .input__field {
   font-size: 1.4rem;
@@ -139,14 +139,87 @@ body {
   border-radius: 5px;
   align-items: center;
 }
+.input__field:focus {
+  outline: solid 2px #172b46;
+}
 
-/* input on blue */
-.input__label--on-blue {
+.input__label--on-color {
   color: #ffffff;
 }
-.input__field--on-blue {
+.input__field--on-color {
   border: none;
   background: #ffffff;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.select__label {
+  font-size: 1.6rem;
+  color: #000000;
+}
+.select__field {
+  font-size: 1.4rem;
+  height: 3rem;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 1rem;
+  border: solid 1px #b3b3b3;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.select__label--on-color {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.select__field {
+  font-size: 1.4rem;
+  height: 3rem;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 1rem;
+  border: solid 1px #b3b3b3;
+  border-radius: 5px;
+  align-items: center;
+}
+.select__field:focus {
+  outline: solid 2px #172b46;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.textarea__label {
+  font-size: 1.6rem;
+  color: #000000;
+}
+.textarea__field {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  height: 10rem;
+  width: 100%;
+  background: #ffffff;
+  padding: 0.7rem 1rem;
+  border: solid 1px #b3b3b3;
+  border-radius: 5px;
+  resize: none;
+}
+.textarea__field:focus {
+  outline: solid 2px #172b46;
+}
+
+.textarea__label--on-color {
+  color: #ffffff;
+}
+.textarea__field--on-color {
+  border: none;
 }
 
 .header {
@@ -159,7 +232,7 @@ body {
 }
 .header--space-between {
   height: 100%;
-  margin: 0 3.2rem auto;
+  margin: 0 3.5rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,6 +267,35 @@ body {
 }
 .header__menu-item:hover {
   border-bottom: solid 1px #ffffff;
+}
+
+.progress {
+  height: 8rem;
+  width: 100%;
+  background: #172b46;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  position: relative;
+  width: 40rem;
+  height: 95%;
+  background: linear-gradient(to bottom, #48749b, #355673);
+  border: solid 0px;
+  border-radius: 5px;
+  margin-left: 3.5rem;
+}
+
+.create-review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

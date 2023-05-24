@@ -1,24 +1,11 @@
 @use "../abstracts/index" as *;
 
-body {
-  background: teal;
-}
-
-/* input on white */
+// on white background
 .input {
-  &--flex {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-  }
+  @include label-input--flex;
   &__label {
     font-size: 1.6rem;
     color: $black;
-
-    &--asterisk {
-      color: red;
-    }
   }
   &__field {
     font-size: 1.4rem;
@@ -29,16 +16,20 @@ body {
     border: solid 1px $input_border;
     border-radius: 5px;
     align-items: center;
+
+    &:focus {
+      outline: solid 2px $primary_shade;
+    }
   }
 }
 
-/* input on blue */
+// on colored background
 
 .input {
-  &__label--on-blue {
+  &__label--on-color {
     color: $white;
   }
-  &__field--on-blue {
+  &__field--on-color {
     border: none;
     background: $white;
   }

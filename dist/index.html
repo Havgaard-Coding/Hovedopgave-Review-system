@@ -11,7 +11,7 @@
     <header class="header">
       <article class="header--space-between">
         <section class="header__left-container">
-          <a><img class="header__logo" src="/AGRAMKOW_logo_white.b64b8627.svg" alt="AGRAMKOW company logo" title="AGRAMKOW company logo"></a>
+          <a href="#"><img class="header__logo" src="/AGRAMKOW_logo_white.b64b8627.svg" alt="AGRAMKOW company logo" title="AGRAMKOW company logo"></a>
           <h1 class="header__title">Review System</h1>
         </section>
         <nav class="header__menu">
@@ -26,27 +26,67 @@
     </header>
     <main>
       <!-- Component making section : Remember to add name="" -->
-      <form action="#">
-        <section class="input input--flex">
-          <label class="input__label" for="title-input">Title<span class="input__label input__label--asterisk">&nbsp;*</span></label>
-          <input class="input__field" id="title-input" type="text" placeholder="Enter title...">
-        </section>
-
-        <section class="input input--flex">
-          <label class="input__label input__label--on-blue" for="title-input">Title<span class="input__label--asterisk">&nbsp;*</span></label>
-          <input class="input__field input__field--on-blue" id="title-input" type="text" placeholder="Enter title...">
+      <!-- <form action="#">
+        <section class="input">
+          <label class="input__label" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
+          <input class="input__field" id="title-input" type="text" placeholder="Enter title..." />
         </section>
 
         <section class="input">
-          <label class="input__label input__label--on-blue" for="participants">Review participants<span class="input__label--asterisk"></span></label>
-          <select class="input__field select" name="" id="participants">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
+          <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
+          <input class="input__field input__field--on-color" id="title-input" type="text" placeholder="Enter title..." />
         </section>
-      </form>
+
+          <section class="select">
+            <label class="select__label" for="participants">Review participants<span class="--asterisk"></span class="--asteriks">nbsp;*</label>
+            <select class="select__field" name="#" id="participants" required>
+              <option value="" disabled selected>Select participants</option>
+              <option value="1">Birgitte Nielsen</option>
+              <option value="2">Henrik Jørgensen</option>
+              <option value="3">Kasper Haugaard Hansen</option>
+              <option value="4">Lone Kriesten</option>
+            </select>
+          </section>
+
+        <section class="textarea">
+          <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
+          <textarea class="textarea__field textarea__field--on-color" name="description" id="description" placeholder="Enter description..."></textarea>
+        </section>
+      </form> -->
+
+      <article class="sidebar">
+        <section class="sidebar__form">
+          <section class="progress"></section>
+          <form class="create-review" action="#">
+            <section class="input">
+              <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
+              <input class="input__field" id="title-input" type="text" placeholder="Enter title...">
+            </section>
+            <section class="textarea">
+              <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
+              <textarea class="textarea__field textarea__field--on-color" name="description" id="description" placeholder="Enter description..."></textarea>
+            </section>
+            <section class="select">
+              <label class="select__label select__label--on-color" for="participants">Review participants<span class="--asterisk">&nbsp;*</span></label>
+              <select class="select__field select__field--on-color" name="#" id="participants" required="">
+                <option value="" disabled="" selected="">Select participants</option>
+                <option value="1">Birgitte Nielsen</option>
+                <option value="2">Henrik Jørgensen</option>
+                <option value="3">Kasper Haugaard Hansen</option>
+                <option value="4">Lone Kriesten</option>
+              </select>
+            </section>
+            <section class="input">
+              <label class="input__label input__label--on-color" for="project-input">Project<span class="input__label --asterisk">&nbsp;*</span></label>
+              <input class="input__field" id="project-input" type="text" placeholder="Enter project number...">
+            </section>
+            <section class="input">
+              <label class="input__label input__label--on-color" for="date-input">Date<span class="input__label --asterisk">&nbsp;*</span></label>
+              <input class="input__field" id="date-input" type="date">
+            </section>
+          </form>
+        </section>
+      </article>
     </main>
   </body>
 </html>

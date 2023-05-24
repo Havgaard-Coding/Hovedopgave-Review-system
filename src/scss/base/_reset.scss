@@ -4,19 +4,22 @@
 ***/
 
 /*
-    Font-size adjusted to easier work with rem instead of px
+    - Font-size adjusted to easier work with rem instead of px
+    - Remove margin and padding
+    - Hide overflow
 */
-
-html {
+html,
+body {
+  margin: 0;
+  height: 100%;
   font-size: 62.5%;
 }
 
-/*
-    Remove default padding and margin
-*/
-body {
-  padding: 0;
-  margin: 0;
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 75px);
+  position: relative;
 }
 
 /*
