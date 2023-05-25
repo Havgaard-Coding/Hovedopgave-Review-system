@@ -2,6 +2,7 @@
 @use "../components/index" as *;
 
 .progress {
+  position: relative;
   height: 8rem;
   width: 100%;
   background: $primary_shade;
@@ -10,17 +11,21 @@
 }
 
 .sidebar {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  position: relative;
+  /* 
+    Uncomment the following lines to get af fixed sidebar.
+    Note: This is only in the case of there having to be scroll on the page.
+  */
+  // position: fixed;
+  // height: calc(95% - 7.5rem);
+
+  grid-column: 1 / 2;
+  align-self: center;
   width: 40rem;
   height: 95%;
   @include main-gradient;
   border: solid 0px;
   border-radius: 5px;
-  margin-left: 3.5rem;
+  overflow: auto;
 }
 
 .create-review {

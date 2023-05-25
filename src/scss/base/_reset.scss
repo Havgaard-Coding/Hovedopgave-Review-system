@@ -8,6 +8,20 @@
     - Remove margin and padding
     - Hide overflow
 */
+// html,
+// body {
+//   margin: 0;
+//   height: 100%;
+//   font-size: 62.5%;
+// }
+
+// main {
+//   display: flex;
+//   flex-direction: column;
+//   height: calc(100% - 75px);
+//   position: relative;
+// }
+
 html,
 body {
   margin: 0;
@@ -15,11 +29,19 @@ body {
   font-size: 62.5%;
 }
 
+body {
+  display: grid;
+  grid-template-rows: 7.5rem 1fr;
+}
+
 main {
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 75px);
-  position: relative;
+  width: 95%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
 }
 
 /*

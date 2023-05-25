@@ -1,0 +1,121 @@
+@use "../abstracts/index" as *;
+
+// small button
+.small-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 8.5rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $white;
+
+  &__primary {
+    background: $primary;
+  }
+  &__primary_shade {
+    background: $primary_shade;
+  }
+  &__primary-tint {
+    background: $primary_tint;
+  }
+  &__dark-grey {
+    background: $dark_grey;
+  }
+  &__primary-border {
+    background: transparent;
+    border: solid 2px $primary;
+    color: $primary;
+  }
+  &__primary_shade-border {
+    background: transparent;
+    border: solid 2px $primary_shade;
+    color: $primary_shade;
+  }
+}
+
+// medium button
+.medium-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24.4rem;
+  max-width: fit-content;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $white;
+
+  &__primary {
+    background: $primary;
+  }
+  &__primary_shade {
+    background: $primary_shade;
+  }
+  &__primary-tint {
+    background: $primary_tint;
+  }
+  &__dark-grey {
+    background: $dark_grey;
+  }
+  &__primary-border {
+    background: transparent;
+    border: solid 2px $primary;
+    color: $primary;
+  }
+  &__primary_shade-border {
+    background: transparent;
+    border: solid 2px $primary_shade;
+    color: $primary_shade;
+  }
+}
+
+// large button
+.large-btn {
+  display: flex;
+  align-items: center;
+  min-width: 32rem;
+  max-width: fit-content;
+  height: 3.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $white;
+
+  &__arrow {
+    justify-self: flex-end;
+    width: 1.6rem;
+    height: 1.8rem;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  &__success_green {
+    background: $succes_green;
+  }
+  &__warning_yellow {
+    background: $warning_yellow;
+  }
+  &__primary {
+    background: $primary;
+  }
+  &__primary_shade {
+    background: $primary_shade;
+  }
+
+  &__dark_grey {
+    background: $dark_grey;
+  }
+}
+

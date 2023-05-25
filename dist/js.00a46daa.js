@@ -117,62 +117,58 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-  return bundleURL;
-}
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-  return '/';
-}
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-    cssTimeout = null;
-  }, 50);
-}
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/index.js":[function(require,module,exports) {
+// const searchInput = document.getElementById("searcInput");
+// const peopleList = document.getElementById("participantsList");
+
+// // Array of people's names (can be fetched from a database or API)
+// const allPeople = [
+//   "John Doe",
+//   "Jane Smith",
+//   "David Johnson",
+//   "David Johnson",
+//   "David Johnson",
+//   "David Johnson",
+//   "David Johnson",
+//   "David Johnson",
+//   // Add more names as needed
+// ];
+
+// // Function to filter and update the dropdown list options
+// function updateOptions(searchTerm) {
+//   // Clear existing options
+//   participantsList.innerHTML = "";
+
+//   // Filter the array based on the search term
+//   const filteredPeople = allPeople.filter((person) =>
+//     person.toLowerCase().includes(searchTerm.toLowerCase())
+//   );
+
+//   // Create new options for the filtered people
+//   filteredPeople.forEach((person) => {
+//     const option = document.createElement("li");
+//     option.textContent = person;
+//     option.addEventListener("click", function () {
+//       searchInput.value = person;
+//       participantsList.innerHTML = ""; // Hide the dropdown after selection
+//     });
+//     participantsList.appendChild(option);
+//   });
+// }
+
+// // Event listener for the search input
+// searchInput.addEventListener("input", function (e) {
+//   const searchTerm = e.target.value;
+//   updateOptions(searchTerm);
+// });
+
+// // Event listener to close the dropdown when clicking outside
+// document.addEventListener("click", function (e) {
+//   if (!e.target.closest(".dropdown")) {
+//     participantsList.innerHTML = "";
+//   }
+// });
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -341,5 +337,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+//# sourceMappingURL=/js.00a46daa.js.map

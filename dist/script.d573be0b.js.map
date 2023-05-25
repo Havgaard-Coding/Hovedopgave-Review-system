@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/script.js"],"names":["document","querySelector","style","backgroundColor"],"mappings":"AAAAA,QAAQ,CAACC,aAAa,CAAC,SAAS,CAAC,CAACC,KAAK,CAACC,eAAe,GAAG,KAAK","file":"script.d573be0b.js","sourceRoot":"..\\src","sourcesContent":["document.querySelector(\".header\").style.backgroundColor = \"red\";\r\n"]}

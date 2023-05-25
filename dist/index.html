@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.77bb5cfd.css">
+    <script src="/js.00a46daa.js" defer=""></script>
     <title>Review system</title>
   <script src="/main.77bb5cfd.js"></script></head>
   <body>
@@ -25,68 +26,60 @@
       </article>
     </header>
     <main>
-      <!-- Component making section : Remember to add name="" -->
-      <!-- <form action="#">
-        <section class="input">
-          <label class="input__label" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
-          <input class="input__field" id="title-input" type="text" placeholder="Enter title..." />
-        </section>
-
-        <section class="input">
-          <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
-          <input class="input__field input__field--on-color" id="title-input" type="text" placeholder="Enter title..." />
-        </section>
-
-          <section class="select">
-            <label class="select__label" for="participants">Review participants<span class="--asterisk"></span class="--asteriks">nbsp;*</label>
-            <select class="select__field" name="#" id="participants" required>
-              <option value="" disabled selected>Select participants</option>
-              <option value="1">Birgitte Nielsen</option>
-              <option value="2">Henrik Jørgensen</option>
-              <option value="3">Kasper Haugaard Hansen</option>
-              <option value="4">Lone Kriesten</option>
-            </select>
-          </section>
-
-        <section class="textarea">
-          <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
-          <textarea class="textarea__field textarea__field--on-color" name="description" id="description" placeholder="Enter description..."></textarea>
-        </section>
-      </form> -->
-
       <article class="sidebar">
         <section class="sidebar__form">
-          <section class="progress"></section>
+          <section class="progress">
+            <img class="progress__bar" src="/progress-bar-create-review-stage.90767d3a.svg" alt="An image of a progressbar indicating what step of the process you are in">
+          </section>
           <form class="create-review" action="#">
-            <section class="input">
-              <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
-              <input class="input__field" id="title-input" type="text" placeholder="Enter title...">
+            <section class="title input">
+              <div class="input__label--flex">
+                <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
+                <img class="input__label-tooltip" src="/circle-info-primary-shade.a64d1a3c.svg" alt="An information field that shows on mouse hover" data-tooltip="Write a descriptive title that describes the review.">
+              </div>
+              <input class="input__field" id="title-input" type="text" placeholder="Enter title..." required="">
             </section>
+
             <section class="textarea">
               <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
               <textarea class="textarea__field textarea__field--on-color" name="description" id="description" placeholder="Enter description..."></textarea>
             </section>
-            <section class="select">
+
+            <section class="participants input">
               <label class="select__label select__label--on-color" for="participants">Review participants<span class="--asterisk">&nbsp;*</span></label>
-              <select class="select__field select__field--on-color" name="#" id="participants" required="">
-                <option value="" disabled="" selected="">Select participants</option>
-                <option value="1">Birgitte Nielsen</option>
-                <option value="2">Henrik Jørgensen</option>
-                <option value="3">Kasper Haugaard Hansen</option>
-                <option value="4">Lone Kriesten</option>
-              </select>
+
+              <div class="input__field--flex">
+                <input type="text" class="input__field input__field--on-color" id="searcInput" placeholder="Select participants..." required="">
+                <a class="small-btn small-btn__primary_shade">Teams</a>
+              </div>
+              <ul class="participants__list" id="participantsList"></ul>
             </section>
+
             <section class="input">
               <label class="input__label input__label--on-color" for="project-input">Project<span class="input__label --asterisk">&nbsp;*</span></label>
-              <input class="input__field" id="project-input" type="text" placeholder="Enter project number...">
+              <input class="input__field" id="project-input" type="text" placeholder="Enter project number..." required="">
             </section>
+
             <section class="input">
               <label class="input__label input__label--on-color" for="date-input">Date<span class="input__label --asterisk">&nbsp;*</span></label>
               <input class="input__field" id="date-input" type="date">
             </section>
+
+            <button class="large-btn large-btn__dark_grey large-btn--placement" type="submit">
+              <p class="large-btn__text">Create review and send material</p>
+              <img class="large-btn__arrow" src="/arrow-right-solid-white.5e7a093c.svg" alt="An arrow indicating the next stage of the process">
+            </button>
           </form>
         </section>
       </article>
+      <!-- <article class="material">
+        <p class="material__title --asterisk">Material</p>
+        <a href="#"
+          ><img
+            src="./assets/icons/circle-plus-grey.svg"
+            alt="A button for adding material"
+        /></a>
+      </article> -->
     </main>
   </body>
 </html>

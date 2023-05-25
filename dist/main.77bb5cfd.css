@@ -15,11 +15,19 @@ body {
   font-size: 62.5%;
 }
 
+body {
+  display: grid;
+  grid-template-rows: 7.5rem 1fr;
+}
+
 main {
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 75px);
-  position: relative;
+  width: 95%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
 }
 
 /*
@@ -129,6 +137,10 @@ body {
   font-size: 1.6rem;
   color: #000000;
 }
+.input__label--flex {
+  display: flex;
+  justify-content: space-between;
+}
 .input__field {
   font-size: 1.4rem;
   height: 3rem;
@@ -142,6 +154,11 @@ body {
 .input__field:focus {
   outline: solid 2px #172b46;
 }
+.input__field--flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
 
 .input__label--on-color {
   color: #ffffff;
@@ -149,6 +166,154 @@ body {
 .input__field--on-color {
   border: none;
   background: #ffffff;
+}
+
+.participants__list {
+  height: 10rem;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 1rem;
+  border-radius: 5px;
+  margin: 0;
+  overflow: auto;
+}
+.participants__individual {
+  font-size: 1.4rem;
+  margin: 1rem 0rem;
+}
+
+.input__label-tooltip {
+  position: relative;
+  width: 1.7rem;
+}
+.input__label-tooltip:hover::before, .input__label-tooltip:hover::after {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  height: 5rem;
+  transform: translateY(100%);
+  width: 10rem;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.progress__bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  margin: auto;
+}
+
+.small-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 8.5rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.small-btn__primary {
+  background: #48749b;
+}
+.small-btn__primary_shade {
+  background: #172b46;
+}
+.small-btn__primary-tint {
+  background: #9eb9d1;
+}
+.small-btn__dark-grey {
+  background: #b3b3b3;
+}
+.small-btn__primary-border {
+  background: transparent;
+  border: solid 2px #48749b;
+  color: #48749b;
+}
+.small-btn__primary_shade-border {
+  background: transparent;
+  border: solid 2px #172b46;
+  color: #172b46;
+}
+
+.medium-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24.4rem;
+  max-width: fit-content;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.medium-btn__primary {
+  background: #48749b;
+}
+.medium-btn__primary_shade {
+  background: #172b46;
+}
+.medium-btn__primary-tint {
+  background: #9eb9d1;
+}
+.medium-btn__dark-grey {
+  background: #b3b3b3;
+}
+.medium-btn__primary-border {
+  background: transparent;
+  border: solid 2px #48749b;
+  color: #48749b;
+}
+.medium-btn__primary_shade-border {
+  background: transparent;
+  border: solid 2px #172b46;
+  color: #172b46;
+}
+
+.large-btn {
+  display: flex;
+  align-items: center;
+  min-width: 32rem;
+  max-width: fit-content;
+  height: 3.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.large-btn__arrow {
+  justify-self: flex-end;
+  width: 1.6rem;
+  height: 1.8rem;
+  margin-right: 1rem;
+}
+.large-btn__text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.large-btn__success_green {
+  background: #499b74;
+}
+.large-btn__warning_yellow {
+  background: #9b7f49;
+}
+.large-btn__primary {
+  background: #48749b;
+}
+.large-btn__primary_shade {
+  background: #172b46;
+}
+.large-btn__dark_grey {
+  background: #b3b3b3;
 }
 
 .select {
@@ -222,6 +387,14 @@ body {
   border: none;
 }
 
+.material {
+  grid-column: 2/2;
+  width: 100%;
+  height: 95%;
+  align-self: center;
+  background: red;
+}
+
 .header {
   width: 100%;
   height: 75px;
@@ -270,6 +443,7 @@ body {
 }
 
 .progress {
+  position: relative;
   height: 8rem;
   width: 100%;
   background: #172b46;
@@ -278,17 +452,18 @@ body {
 }
 
 .sidebar {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  position: relative;
+  /* 
+    Uncomment the following lines to get af fixed sidebar.
+    Note: This is only in the case of there having to be scroll on the page.
+  */
+  grid-column: 1/2;
+  align-self: center;
   width: 40rem;
   height: 95%;
   background: linear-gradient(to bottom, #48749b, #355673);
   border: solid 0px;
   border-radius: 5px;
-  margin-left: 3.5rem;
+  overflow: auto;
 }
 
 .create-review {
@@ -296,6 +471,12 @@ body {
   flex-direction: column;
   gap: 10px;
   padding: 2rem;
+}
+
+.large-btn--placement {
+  position: absolute;
+  right: 6.5rem;
+  bottom: 6.5rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
