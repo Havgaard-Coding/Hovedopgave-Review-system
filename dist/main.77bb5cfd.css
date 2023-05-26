@@ -211,7 +211,7 @@ body {
     font-size: 1.4rem;
   }
   .input__field {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     height: 2.5rem;
   }
   .input .participants__list {
@@ -346,6 +346,11 @@ body {
     height: 2.5rem;
     width: 7rem;
   }
+  .large-btn {
+    font-size: 1.4rem;
+    height: 3.2rem;
+    min-width: 30rem;
+  }
 }
 .select {
   display: flex;
@@ -391,7 +396,7 @@ body {
     font-size: 1.4rem;
   }
   .select__field {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .select .participants__list {
     height: 10rem;
@@ -434,7 +439,7 @@ body {
     font-size: 1.4rem;
   }
   .textarea__field {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .textarea .participants__list {
     height: 10rem;
