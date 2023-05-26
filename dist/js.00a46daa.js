@@ -118,6 +118,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/index.js":[function(require,module,exports) {
+/* Modal */
+var modal = document.querySelector(".modal");
+var openMaterialModal = document.querySelector(".modal__open-btn");
+var closeMaterialModal = document.querySelector(".modal__close-btn");
+openMaterialModal.addEventListener("click", function () {
+  modal.showModal();
+});
+closeMaterialModal.addEventListener("click", function () {
+  modal.close();
+});
+
 // const searchInput = document.getElementById("searcInput");
 // const peopleList = document.getElementById("participantsList");
 
@@ -193,7 +204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59907" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62088" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

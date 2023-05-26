@@ -35,13 +35,12 @@ body {
 }
 
 main {
-  width: 95%;
-  max-height: 100%;
-  margin: 0 auto;
+  height: calc(100% - 7.5rem);
+  margin: 5rem;
   display: grid;
-  grid-template-columns: 40rem 1fr;
+  grid-template-columns: 45rem 1fr;
   grid-template-rows: 1fr;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 /*

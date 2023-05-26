@@ -1,15 +1,6 @@
 @use "../abstracts/index" as *;
 @use "../components/index" as *;
 
-.progress {
-  position: relative;
-  height: 8rem;
-  width: 100%;
-  background: $primary_shade;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
 .sidebar {
   /* 
     Uncomment the following lines to get af fixed sidebar.
@@ -20,12 +11,21 @@
 
   grid-column: 1 / 2;
   align-self: center;
-  width: 40rem;
-  height: 95%;
+  width: 45rem;
+  height: 100%;
   @include main-gradient;
   border: solid 0px;
   border-radius: 5px;
   overflow: auto;
+}
+
+.progress {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  background: $primary_shade;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .create-review {

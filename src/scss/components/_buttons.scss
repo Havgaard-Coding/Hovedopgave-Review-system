@@ -12,6 +12,7 @@
   font-size: 1.6rem;
   font-weight: 500;
   color: $white;
+  cursor: pointer;
 
   &__primary {
     background: $primary;
@@ -50,6 +51,7 @@
   font-size: 1.6rem;
   font-weight: 500;
   color: $white;
+  cursor: pointer;
 
   &__primary {
     background: $primary;
@@ -87,6 +89,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   color: $white;
+  cursor: pointer;
 
   &__arrow {
     justify-self: flex-end;
@@ -118,4 +121,3 @@
     background: $dark_grey;
   }
 }
-

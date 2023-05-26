@@ -9,6 +9,7 @@
     <title>Review system</title>
   <script src="/main.77bb5cfd.js"></script></head>
   <body>
+    <!-- Sidebar -->
     <header class="header">
       <article class="header--space-between">
         <section class="header__left-container">
@@ -25,29 +26,38 @@
         </nav>
       </article>
     </header>
+
+    <!-- Sidebar -->
     <main>
       <article class="sidebar">
         <section class="sidebar__form">
           <section class="progress">
             <img class="progress__bar" src="/progress-bar-create-review-stage.90767d3a.svg" alt="An image of a progressbar indicating what step of the process you are in">
+
+            <!-- Form -->
           </section>
           <form class="create-review" action="#">
             <section class="title input">
               <div class="input__label--flex">
                 <label class="input__label input__label--on-color" for="title-input">Title<span class="input__label --asterisk">&nbsp;*</span></label>
-                <img class="input__label-tooltip" src="/circle-info-primary-shade.a64d1a3c.svg" alt="An information field that shows on mouse hover" data-tooltip="Write a descriptive title that describes the review.">
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Write a descriptive title that describes the review."></aside>
               </div>
-              <input class="input__field" id="title-input" type="text" placeholder="Enter title..." required="">
+              <input class="input__field input__field--on-color" id="title-input" type="text" placeholder="Enter title..." required="">
             </section>
 
             <section class="textarea">
-              <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
+              <div class="input__label--flex">
+                <label class="textarea__label textarea__label--on-color" for="description">Description (optional)</label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Write a description to add additional information about the review. "></aside>
+              </div>
               <textarea class="textarea__field textarea__field--on-color" name="description" id="description" placeholder="Enter description..."></textarea>
             </section>
 
             <section class="participants input">
-              <label class="select__label select__label--on-color" for="participants">Review participants<span class="--asterisk">&nbsp;*</span></label>
-
+              <div class="input__label--flex">
+                <label class="select__label select__label--on-color" for="participants">Review participants<span class="--asterisk">&nbsp;*</span></label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Invite the partcipants that you would like to review the material."></aside>
+              </div>
               <div class="input__field--flex">
                 <input type="text" class="input__field input__field--on-color" id="searcInput" placeholder="Select participants..." required="">
                 <a class="small-btn small-btn__primary_shade">Teams</a>
@@ -56,13 +66,19 @@
             </section>
 
             <section class="input">
-              <label class="input__label input__label--on-color" for="project-input">Project<span class="input__label --asterisk">&nbsp;*</span></label>
-              <input class="input__field" id="project-input" type="text" placeholder="Enter project number..." required="">
+              <div class="input__label--flex">
+                <label class="input__label input__label--on-color" for="project-input">Project<span class="input__label --asterisk">&nbsp;*</span></label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Enter the project number that the review is assoiciated with."></aside>
+              </div>
+              <input class="input__field input__field--on-color" id="project-input" type="text" placeholder="Enter project number..." required="">
             </section>
 
             <section class="input">
-              <label class="input__label input__label--on-color" for="date-input">Date<span class="input__label --asterisk">&nbsp;*</span></label>
-              <input class="input__field" id="date-input" type="date">
+              <div class="input__label--flex">
+                <label class="input__label input__label--on-color" for="date-input">Date<span class="input__label --asterisk">&nbsp;*</span></label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Select the deadline for when the review should be completed."></aside>
+              </div>
+              <input class="input__field input__field--on-color" id="date-input" type="date" required="">
             </section>
 
             <button class="large-btn large-btn__dark_grey large-btn--placement" type="submit">
@@ -72,14 +88,56 @@
           </form>
         </section>
       </article>
-      <!-- <article class="material">
-        <p class="material__title --asterisk">Material</p>
-        <a href="#"
-          ><img
-            src="./assets/icons/circle-plus-grey.svg"
-            alt="A button for adding material"
-        /></a>
-      </article> -->
+
+      <!-- Material -->
+      <article class="create-review-material create-review-material--flex">
+        <p class="create-review-material__title">
+          Material<span class="--asterisk">&nbsp;*</span>
+        </p>
+        <div class="create-review-material__add-icon--center">
+          <a class="modal__open-btn" href="#"><img class="create-review-material__add-icon" src="/circle-plus-grey.71e2a8f1.svg" alt="A button for adding material"></a>
+        </div>
+
+        <!-- Modal -->
+        <dialog class="modal" id="modal">
+          <form action="#" method="dialog">
+            <a class="modal__close-btn"><img src="/xmark-solid-black.3ced3fa6.svg" alt="An x button that close the modal"></a>
+            <h2 class="modal__title">
+              Enter material<span class="--asterisk">&nbsp;*</span>
+            </h2>
+            <section class="modal__material-input input">
+              <div class="input__label--flex">
+                <label class="input__label" for="title-input">Material number<span class="input__label --asterisk">&nbsp;*</span></label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Enter the number assoiciated with the material."></aside>
+              </div>
+              <input class="input__field" id="title-input" type="text" placeholder="Enter material number..." required="">
+            </section>
+            <section class="modal__material-input input">
+              <div class="input__label--flex">
+                <label class="input__label" for="title-input">Material name (optional)</label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Enter the name assoiciated with the material"></aside>
+              </div>
+              <input class="input__field" id="title-input" type="text" placeholder="Enter material name...">
+            </section>
+            <section class="modal__material-input input">
+              <div class="input__label--flex">
+                <label class="input__label" for="title-input">Current version
+                  <span class="input__label --asterisk">&nbsp;*</span></label>
+                <aside class="input__label-tooltip" alt="An information field that shows on mouse hover" data-tooltip="Enter the current version of the material."></aside>
+              </div>
+              <input class="input__field" id="title-input" type="text" placeholder="Enter current version..." required="">
+            </section>
+            <section class="modal__buttons">
+              <button class="modal__add-btn medium-btn medium-btn__primary_shade" type="submit">
+                Add material
+              </button>
+              <button class="modal__add-and-create medium-btn medium-btn__primary_shade" type="submit">
+                Add and create more
+              </button>
+            </section>
+          </form>
+        </dialog>
+      </article>
     </main>
   </body>
 </html>
