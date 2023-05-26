@@ -651,6 +651,7 @@ main {
 
 @media screen and (max-width: 1800px) {
   main {
+    margin: 0 2rem;
     grid-template-columns: 40rem 1fr;
     gap: 1.5;
   }
