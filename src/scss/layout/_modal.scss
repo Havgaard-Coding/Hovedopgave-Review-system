@@ -42,3 +42,10 @@
     transform: translate(-50%, 0);
   }
 }
+
+@media screen and (max-width: 1800px) {
+  .modal {
+    width: 1000px;
+    height: 400px;
+  }
+}

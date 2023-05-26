@@ -103,3 +103,31 @@
     --scale: 1;
   }
 }
+
+@media screen and (max-width: 1800px) {
+  .input {
+    &__label-tooltip {
+      &::before {
+        font-size: 1.4rem;
+      }
+      &::before,
+      &::after {
+        width: 20rem;
+      }
+    }
+
+    &__label {
+      font-size: 1.4rem;
+    }
+    &__field {
+      font-size: 1.2rem;
+      height: 2.5rem;
+    }
+
+    .participants {
+      &__list {
+        height: 10rem;
+      }
+    }
+  }
+}

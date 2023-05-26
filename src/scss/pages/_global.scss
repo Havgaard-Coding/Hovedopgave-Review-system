@@ -1,5 +1,47 @@
+// Next stage button
 .large-btn--placement {
   position: absolute;
   right: 6.5rem;
   bottom: 6.5rem;
+  z-index: 10;
+}
+
+// // global placement of elements
+// body {
+//   display: grid;
+//   grid-template-rows: 7.5rem 1fr;
+// }
+
+// main {
+//   height: calc(100% - 7.5rem);
+//   display: grid;
+//   grid-template-columns: 45rem 1fr;
+//   grid-template-rows: 1fr;
+//   gap: 3rem;
+// }
+
+// global placement of elements
+body {
+  display: grid;
+  grid-template-rows: 7.5rem 1fr;
+}
+
+main {
+  height: 100%;
+  margin: 0 2rem;
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 1800px) {
+  main {
+    grid-template-columns: 40rem 1fr;
+    gap: 1.5;
+  }
+  .large-btn--placement {
+    right: 4rem;
+    bottom: 4rem;
+  }
 }

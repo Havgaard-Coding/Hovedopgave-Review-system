@@ -33,3 +33,20 @@
     border: none;
   }
 }
+
+@media screen and (max-width: 1800px) {
+  .textarea {
+    &__label {
+      font-size: 1.4rem;
+    }
+    &__field {
+      font-size: 1.2rem;
+    }
+
+    .participants {
+      &__list {
+        height: 10rem;
+      }
+    }
+  }
+}

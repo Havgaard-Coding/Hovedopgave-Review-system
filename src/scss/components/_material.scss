@@ -3,7 +3,8 @@
 .create-review-material {
   grid-column: 2 / 2;
   width: 100%;
-  height: 90%;
+  align-self: center;
+  height: 95%;
 
   &--flex {
     display: flex;
@@ -27,6 +28,16 @@
     height: 4.6rem;
     &--center {
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .create-review-material {
+    height: 95%;
+    &__add-icon {
+      width: 4rem;
+      height: 4rem;
     }
   }
 }

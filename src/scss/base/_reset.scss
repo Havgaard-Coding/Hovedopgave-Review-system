@@ -29,20 +29,6 @@ body {
   font-size: 62.5%;
 }
 
-body {
-  display: grid;
-  grid-template-rows: 7.5rem 1fr;
-}
-
-main {
-  height: calc(100% - 7.5rem);
-  margin: 5rem;
-  display: grid;
-  grid-template-columns: 45rem 1fr;
-  grid-template-rows: 1fr;
-  gap: 3rem;
-}
-
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug

@@ -15,20 +15,6 @@ body {
   font-size: 62.5%;
 }
 
-body {
-  display: grid;
-  grid-template-rows: 7.5rem 1fr;
-}
-
-main {
-  height: calc(100% - 7.5rem);
-  margin: 5rem;
-  display: grid;
-  grid-template-columns: 45rem 1fr;
-  grid-template-rows: 1fr;
-  gap: 3rem;
-}
-
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -214,6 +200,24 @@ body {
   --scale: 1;
 }
 
+@media screen and (max-width: 1800px) {
+  .input__label-tooltip::before {
+    font-size: 1.4rem;
+  }
+  .input__label-tooltip::before, .input__label-tooltip::after {
+    width: 20rem;
+  }
+  .input__label {
+    font-size: 1.4rem;
+  }
+  .input__field {
+    font-size: 1.2rem;
+    height: 2.5rem;
+  }
+  .input .participants__list {
+    height: 10rem;
+  }
+}
 .progress__bar {
   position: absolute;
   top: 50%;
@@ -336,6 +340,13 @@ body {
   background: #b3b3b3;
 }
 
+@media screen and (max-width: 1800px) {
+  .small-btn {
+    font-size: 1.4rem;
+    height: 2.5rem;
+    width: 7rem;
+  }
+}
 .select {
   display: flex;
   flex-direction: column;
@@ -375,6 +386,17 @@ body {
   outline: solid 2px #172b46;
 }
 
+@media screen and (max-width: 1800px) {
+  .select__label {
+    font-size: 1.4rem;
+  }
+  .select__field {
+    font-size: 1.2rem;
+  }
+  .select .participants__list {
+    height: 10rem;
+  }
+}
 .textarea {
   display: flex;
   flex-direction: column;
@@ -407,10 +429,22 @@ body {
   border: none;
 }
 
+@media screen and (max-width: 1800px) {
+  .textarea__label {
+    font-size: 1.4rem;
+  }
+  .textarea__field {
+    font-size: 1.2rem;
+  }
+  .textarea .participants__list {
+    height: 10rem;
+  }
+}
 .create-review-material {
   grid-column: 2/2;
   width: 100%;
-  height: 90%;
+  align-self: center;
+  height: 95%;
 }
 .create-review-material--flex {
   display: flex;
@@ -436,6 +470,15 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1800px) {
+  .create-review-material {
+    height: 95%;
+  }
+  .create-review-material__add-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .header {
   width: 100%;
   height: 75px;
@@ -483,6 +526,20 @@ body {
   border-bottom: solid 1px #ffffff;
 }
 
+@media screen and (max-width: 1800px) {
+  .header {
+    height: 65px;
+  }
+  .header__title {
+    font-size: 2.5rem;
+  }
+  .header__logo {
+    width: 15rem;
+  }
+  .header__menu-item {
+    font-size: 1.6rem;
+  }
+}
 .sidebar {
   /* 
     Uncomment the following lines to get af fixed sidebar.
@@ -491,7 +548,7 @@ body {
   grid-column: 1/2;
   align-self: center;
   width: 45rem;
-  height: 100%;
+  height: 95%;
   background: linear-gradient(to bottom, #48749b, #355673);
   border: solid 0px;
   border-radius: 5px;
@@ -514,6 +571,15 @@ body {
   padding: 2rem;
 }
 
+@media screen and (max-width: 1800px) {
+  .sidebar {
+    width: 40rem;
+    height: 95%;
+  }
+  .progress {
+    height: 8rem;
+  }
+}
 .modal {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   position: relative;
@@ -556,10 +622,42 @@ body {
   transform: translate(-50%, 0);
 }
 
+@media screen and (max-width: 1800px) {
+  .modal {
+    width: 1000px;
+    height: 400px;
+  }
+}
 .large-btn--placement {
   position: absolute;
   right: 6.5rem;
   bottom: 6.5rem;
+  z-index: 10;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 7.5rem 1fr;
+}
+
+main {
+  height: 100%;
+  margin: 0 2rem;
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 1800px) {
+  main {
+    grid-template-columns: 40rem 1fr;
+    gap: 1.5;
+  }
+  .large-btn--placement {
+    right: 4rem;
+    bottom: 4rem;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

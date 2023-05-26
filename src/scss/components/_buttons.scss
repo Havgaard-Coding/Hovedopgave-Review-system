@@ -121,3 +121,11 @@
     background: $dark_grey;
   }
 }
+
+@media screen and (max-width: 1800px) {
+  .small-btn {
+    font-size: 1.4rem;
+    height: 2.5rem;
+    width: 7rem;
+  }
+}
