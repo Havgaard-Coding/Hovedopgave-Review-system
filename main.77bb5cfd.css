@@ -174,7 +174,7 @@ body {
   height: 1.7rem;
   border-radius: 50%;
   line-height: 1.4;
-  background-image: url("./circle-info-primary-shade.a64d1a3c.svg");
+  background-image: url("./circle-info-primary-shade.svg");
   background-size: contain;
 }
 .input__label-tooltip::before,
