@@ -86,7 +86,7 @@ meter {
 /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly.
    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -95,7 +95,7 @@ meter {
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
@@ -177,7 +177,8 @@ body {
   background-image: url("./circle-info-primary-shade.a64d1a3c.svg");
   background-size: contain;
 }
-.input__label-tooltip::before, .input__label-tooltip::after {
+.input__label-tooltip::before,
+.input__label-tooltip::after {
   --scale: 0;
   position: absolute;
   top: 3px;
@@ -196,7 +197,8 @@ body {
   background: #172b46;
   color: #ffffff;
 }
-.input__label-tooltip:hover::before, .input__label-tooltip:hover::after {
+.input__label-tooltip:hover::before,
+.input__label-tooltip:hover::after {
   --scale: 1;
 }
 
@@ -204,7 +206,8 @@ body {
   .input__label-tooltip::before {
     font-size: 1.4rem;
   }
-  .input__label-tooltip::before, .input__label-tooltip::after {
+  .input__label-tooltip::before,
+  .input__label-tooltip::after {
     width: 20rem;
   }
   .input__label {
